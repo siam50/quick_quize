@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Quizes from '../Quizes/Quizes';
 import './Home.css';
 
-const Home = ({ handleQuiz }) => {
+const Home = () => {
     const allQuiz = useLoaderData();
     const { data } = allQuiz;
     return (
@@ -16,7 +16,7 @@ const Home = ({ handleQuiz }) => {
             </div>
             <div className='grid md:grid-cols-3 gap-5 justify-items-center'>
                 {
-                    data.map(quiz => <Quizes key={quiz.id} quiz={quiz} handleQuiz={handleQuiz}></Quizes>)
+                    data.map(quiz => <Quizes key={quiz.id} quiz={quiz}></Quizes>)
                 }
             </div>
         </div>

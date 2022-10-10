@@ -3,12 +3,10 @@ import './App.css';
 import Blog from './components/Blog/Blog';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import QuizDetail from './components/QuizDetail/QuizDetail';
 import Main from './layouts/Main';
 
 function App() {
-  const handleQuiz = (id) => {
-    console.log(id)
-  }
 
   const router = createBrowserRouter([
     {
@@ -16,7 +14,12 @@ function App() {
         {
           path: '/',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-          element: <Home handleQuiz={handleQuiz}></Home>
+          element: <Home></Home>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
+          element: <QuizDetail></QuizDetail>
         },
         { path: '/blog', element: <Blog></Blog> }
       ]
