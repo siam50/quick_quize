@@ -8,6 +8,7 @@ import Main from './layouts/Main';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Statistics from './components/Statistics/Statistics';
+import Quizes from './components/Quizes/Quizes';
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
           element: <QuizDetail></QuizDetail>
         },
         { path: '/blog', element: <Blog></Blog> },
-        { path: '/statistics', element: <Statistics></Statistics> }
+        { path: '/statistics', element: <Statistics></Statistics> },
+        { path: '*', element: <div className='text-4xl font-semibold mt-20'> No Data Found 404</div> }
       ]
     },
 

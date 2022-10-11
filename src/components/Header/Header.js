@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-teal-600 text-white">
+        <div className="navbar bg-teal-600 text-white lg:px-12">
             <div className="flex-1">
                 <a className="btn btn-ghost normal-case text-xl">Quick Quiz</a>
             </div>
