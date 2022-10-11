@@ -12,7 +12,7 @@ const Blog = () => {
                 <p className='md:text-start mt-4'>The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux. React.createContext() is all you need. It returns a consumer and a provider. Provider is a component that as it's names suggests provides the state to its children. It will hold the "store" and be the parent of all the components that might need that store. Consumer as it so happens is a component that consumes and uses the state. More information can be found on React's documentation page</p>
             </div>
             <div className='md:px-52 mt-10'>
-                <h1 className='text-3xl font-semibold'> Question 2: What is useRef?</h1>
+                <h1 className='text-3xl font-semibold'> Question 3: What is useRef?</h1>
                 <p className='md:text-start mt-4'>However, useRef() is useful for more than the ref attribute. It’s handy for keeping any mutable value around similar to how you’d use instance fields in classes. This works because useRef() creates a plain JavaScript object. The only difference between useRef() and creating a "current: ..." object yourself is that useRef will give you the same ref object on every render. Keep in mind that useRef doesn’t notify you when its content changes. Mutating the .current property doesn’t cause a re-render. If you want to run some code when React attaches or detaches a ref to a DOM node, you may want to use a callback ref instead.
                 </p>
             </div>
