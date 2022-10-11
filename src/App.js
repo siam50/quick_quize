@@ -8,7 +8,7 @@ import Main from './layouts/Main';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Statistics from './components/Statistics/Statistics';
-import Quizes from './components/Quizes/Quizes';
+import QuizPage from './components/QuizPage/QuizPage';
 
 function App() {
 
@@ -25,9 +25,14 @@ function App() {
           loader: async ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
           element: <QuizDetail></QuizDetail>
         },
+        {
+          path: '/quizes',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <QuizPage></QuizPage>
+        },
         { path: '/blog', element: <Blog></Blog> },
         { path: '/statistics', element: <Statistics></Statistics> },
-        { path: '*', element: <div className='text-4xl font-semibold mt-20'> No Data Found 404</div> }
+        { path: '*', element: <div className='text-4xl font-semibold mt-20'>Sorry!! No Data Found 404</div> }
       ]
     },
 

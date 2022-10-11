@@ -7,10 +7,10 @@ const Questions = ({ questionProp }) => {
 
     const handleAnsr = (option) => {
         if (option === correctAnswer) {
-            toast.success('Your ansr correct', { autoClose: 1000 })
+            toast.success('Congratulations!! Your Answer Is Correct', { autoClose: 1000 })
         }
         else {
-            toast.warn('Your Answer Is Wrong', { autoClose: 1000 })
+            toast.warn('Sorry!! Your Answer Is Wrong', { autoClose: 1000 })
         }
     }
 
@@ -27,9 +27,6 @@ const Questions = ({ questionProp }) => {
                         <EyeIcon onClick={handleCorrectAnsr} className="h-6 w-6 text-blue-500" />
                     </div>
                     <div className="card-actions justify-center grid md:grid-cols-2 mt-3">
-                        {/* {
-                            options.map(option => <button key={option} onClick={() => handleAnsr(option)} className="btn btn-success">{option}</button>)
-                        } */}
                         {
                             options.map(option => <div className='border p-2' key={option}>
                                 <input onClick={() => handleAnsr(option)} type="radio" id={option} name={question} value={option} />

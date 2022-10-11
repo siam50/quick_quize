@@ -11,9 +11,6 @@ const Home = () => {
     return (
         <div>
             <div className='header mb-10 lg:px-12'>
-                {/* <h1 className='text-white text-4xl font-semibold'>Are You Ready</h1>
-                <h1 className='text-white text-4xl font-semibold'>For</h1>
-                <h1 className='text-white text-4xl font-semibold'>Quiz??</h1> */}
                 <div className="card lg:card-side bg-base-100 shadow-xl">
                     <figure><img src={cover} alt="Movie" /></figure>
                     <div className="card-body grid justify-items-center lg:self-center">
