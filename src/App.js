@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import QuizDetail from './components/QuizDetail/QuizDetail';
 import Main from './layouts/Main';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer position='top-center'></ToastContainer>
     </div>
   );
 }
