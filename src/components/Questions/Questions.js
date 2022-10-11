@@ -26,9 +26,17 @@ const Questions = ({ questionProp }) => {
                         <h2 className="card-title">Question: {question}</h2>
                         <EyeIcon onClick={handleCorrectAnsr} className="h-6 w-6 text-blue-500" />
                     </div>
-                    <div className="card-actions justify-center grid grid-cols-2 mt-3">
+                    <div className="card-actions justify-center grid md:grid-cols-2 mt-3">
+                        {/* {
+                            options.map(option => <button key={option} onClick={() => handleAnsr(option)} className="btn btn-success">{option}</button>)
+                        } */}
                         {
-                            options.map(option => <button onClick={() => handleAnsr(option)} className="btn btn-success">{option}</button>)
+                            options.map(option => <div className='border p-2' key={option}>
+                                <input onClick={() => handleAnsr(option)} type="radio" id={option} name={question} value={option} />
+                                <label htmlFor={option}>{option}</label>
+                            </div>
+
+                            )
                         }
                     </div>
                 </div>
