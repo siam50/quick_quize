@@ -10,14 +10,16 @@ const Statistics = () => {
     }, [])
 
     return (
-        <div className='grid justify-center'>
+        <div>
             <h1 className='text-3xl font-semibold mb-5'>Here is Total Quize Statistics</h1>
-            <BarChart width={350} height={300} data={quizes}>
-                <Bar dataKey="total" fill="#8884d8" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-            </BarChart>
+            <ResponsiveContainer width='100%' height={400}>
+                <BarChart width={150} height={40} data={quizes}>
+                    <Bar dataKey="total" fill="#8884d8" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                </BarChart>
+            </ResponsiveContainer>
         </div>
     );
 };
